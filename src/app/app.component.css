@@ -1,0 +1,39 @@
+.title-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container > h1 {
+    color: #163832;
+    font-size: 3rem;
+}
+
+.starships{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.star{    
+    color: #8EB69B;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    min-width: 320px;
+    text-align: center;
+    box-shadow: 0px 20px 24px 3px rgba(135,90,122, 0.2);
+    border-radius: 34px;
+    border: 2px solid #8EB69B;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.star:hover{    
+    color: #FFAA33;
+    background-color: #163832;
+    border: 2px solid #163832;
+}
+
