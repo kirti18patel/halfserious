@@ -11,4 +11,8 @@ export class ApiService {
   getSWData(){
     return this.http.get("https://swapi.dev/api/starships/");
   }
+
+  getPilot(url: string){
+    return this.http.get(url);
+  }
 }

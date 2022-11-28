@@ -1,18 +1,31 @@
+<div *ngIf="!starships.results.length">
+Loading...
+</div>
 <div class="title-container">
   <h1 class="title">
     Welcome to {{ title }}!
   </h1>
 </div>
 <div class="starships">
-  <div (click)="onclick()" class="star" *ngFor='let starship of starships.results '>
-     <p>{{starship.name}}</p>
-     <div class="pilots" *ngIf="visible">
-      <div *ngIf="starship.pilots.length > 0">
-        List of Pilots
-        <div class="star" *ngFor='let pilot of starship.pilots'>{{pilot}}</div>
-      </div><div *ngIf="starship.pilots.length <= 0">
-        No Pilots for this spaceship!
-      </div>
-      </div>
+  <div class="star" *ngFor='let starship of starships.results '>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{starship.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div class="pilots">
+          <div *ngIf="starship.pilots.length > 0">
+            List of Pilots
+            <div class="star" *ngFor='let pilot of starship.pilots'>{{pilot}}</div>
+          </div>
+          <div *ngIf="starship.pilots.length <= 0">
+            No Pilots for this spaceship!
+          </div>
+          </div>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
 </div>
